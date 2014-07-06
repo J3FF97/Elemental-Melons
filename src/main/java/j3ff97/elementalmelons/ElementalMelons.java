@@ -5,6 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import j3ff97.elementalmelons.init.ModItems;
 import j3ff97.elementalmelons.proxy.IProxy;
 import j3ff97.elementalmelons.reference.Reference;
 import j3ff97.elementalmelons.utility.LogHelper;
@@ -22,7 +23,7 @@ public class ElementalMelons
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)
     {
-
+        ModItems.init();
 
         LogHelper.info("Elemental Melons: Successful PreInit");
     }
