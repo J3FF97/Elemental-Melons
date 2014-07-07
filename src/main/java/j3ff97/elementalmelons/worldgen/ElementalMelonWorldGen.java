@@ -1,6 +1,7 @@
 package j3ff97.elementalmelons.worldgen;
 
 import cpw.mods.fml.common.IWorldGenerator;
+import j3ff97.elementalmelons.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -25,17 +26,21 @@ public class ElementalMelonWorldGen implements IWorldGenerator
 
     public void generateSurface(Random random, int X, int Z, World world)
     {
-
+        addSkyMelon(ModBlocks.blockSkyMelon, world, random, X , Z, 1, 3, 50, 120, 130);
+        addFireMelon(ModBlocks.blockFireMelon, world, random, X, Z, 1, 3, 50, 0, 256);
+        addEarthMelon(ModBlocks.blockEarthMelon, world, random, X, Z, 1, 3, 50, 0, 256);
+        addWaterMelon(ModBlocks.blockWaterMelon, world, random, X, Z, 1, 3, 50, 0, 256);
     }
 
     public void generateEnd(Random random, int X, int Z, World world)
     {
-
+        addSkyMelon(ModBlocks.blockSkyMelon, world, random, X , Z, 1, 1, 5, 64, 256);
     }
 
     public void generateNether(Random random, int X, int Z, World world)
     {
-
+        addFireMelon(ModBlocks.blockFireMelon, world, random, X, Z, 1, 1, 5, 0, 256 );
+        addEarthMelon(ModBlocks.blockEarthMelon, world, random, X, Z, 1, 1, 5, 0, 256);
     }
 
     public void addSkyMelon(Block block, World world, Random random, int blockXPos, int blockZPos, int minVeinSize, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
