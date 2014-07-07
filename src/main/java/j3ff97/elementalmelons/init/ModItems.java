@@ -3,6 +3,7 @@ package j3ff97.elementalmelons.init;
 import cpw.mods.fml.common.registry.GameRegistry;
 import j3ff97.elementalmelons.items.*;
 import j3ff97.elementalmelons.reference.Names;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemFood;
 
 public class ModItems
@@ -18,12 +19,11 @@ public class ModItems
 
     public static void init()
     {
-        //skyMelonSlice = new ItemSkyMelonSlice();
         skyMelonSlice = new ItemSkyMelonSlice(2, 0.3f, false);
         earthMelonSlice = new ItemEarthMelonSlice(2, 0.3f, false);
         waterMelonSlice = new ItemWaterMelonSlice(2, 0.3f, false);
         fireMelonSlice = new ItemFireMelonSlice(2, 0.3f, false);
-        skyMelonSeeds = new ItemSkyMelonSeeds();
+        skyMelonSeeds = new ItemSkyMelonSeeds(ModBlocks.skyMelonStem, Blocks.farmland);
         earthMelonSeeds = new ItemEarthMelonSeeds();
         waterMelonSeeds = new ItemWaterMelonSeeds();
         fireMelonSeeds = new ItemFireMelonSeeds();

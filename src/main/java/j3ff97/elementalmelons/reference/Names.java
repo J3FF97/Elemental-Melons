@@ -17,6 +17,7 @@ public class Names
     public static final String blockEarthMelon_unlocalizedName = "blockEarthMelon";
     public static final String blockWaterMelon_unlocalizedName = "blockWaterMelon";
     public static final String blockFireMelon_unlocalizedName = "blockFireMelon";
+    public static final String skyMelonStem_unlocalizedName = "skyMelonStem";
 
     //Tools
 
