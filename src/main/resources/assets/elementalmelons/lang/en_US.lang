@@ -1,6 +1,18 @@
 --Items--
+item.skyMelonSlice.name=Sky Melon
+item.earthMelonSlice.name=Earth Melon
+item.waterMelonSlice.name=Water Melon
+item.fireMelonSlice.name=Fire Melon
+item.skyMelonSeeds.name=Sky Melon Seeds
+item.earthMelonSeeds.name=Earth Melon Seeds
+item.waterMelonSeeds.name=Water Melon Seeds
+item.fireMelonSeeds.name=Fire Melon Seeds
 
 --Blocks--
+tile.blockSkyMelon.name=Sky Melon
+tile.blockEarthMelon.name=Earth Melon
+tile.blockWaterMelon.name=Water Melon
+tile.blockFireMelon.name=Fire Melon
 
 --Tools--
 
