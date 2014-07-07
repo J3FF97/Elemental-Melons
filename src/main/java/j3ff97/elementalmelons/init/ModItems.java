@@ -24,9 +24,9 @@ public class ModItems
         waterMelonSlice = new ItemWaterMelonSlice(2, 0.3f, false);
         fireMelonSlice = new ItemFireMelonSlice(2, 0.3f, false);
         skyMelonSeeds = new ItemSkyMelonSeeds(ModBlocks.skyMelonStem, Blocks.farmland);
-        earthMelonSeeds = new ItemEarthMelonSeeds();
-        waterMelonSeeds = new ItemWaterMelonSeeds();
-        fireMelonSeeds = new ItemFireMelonSeeds();
+        earthMelonSeeds = new ItemEarthMelonSeeds(ModBlocks.earthMelonStem, Blocks.farmland);
+        waterMelonSeeds = new ItemWaterMelonSeeds(ModBlocks.waterMelonStem, Blocks.farmland);
+        fireMelonSeeds = new ItemFireMelonSeeds(ModBlocks.fireMelonStem, Blocks.farmland);
 
         GameRegistry.registerItem(skyMelonSlice   , Names.skyMelonSlice_unlocalizedName);
         GameRegistry.registerItem(earthMelonSlice , Names.earthMelonSlice_unlocalizedName);

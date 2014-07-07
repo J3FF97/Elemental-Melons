@@ -5,14 +5,13 @@ import j3ff97.elementalmelons.reference.Names;
 import j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 
 public class ItemSkyMelonSeeds extends ItemSeeds
 {
-    public ItemSkyMelonSeeds(Block crop, Block soilBlock)
+    public ItemSkyMelonSeeds(Block crop, Block soil)
     {
-        super(crop, soilBlock);
+        super(crop, soil);
         this.setUnlocalizedName(Names.skyMelonSeeds_unlocalizedName);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
     }
