@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import j3ff97.elementalmelons.handler.CraftingHandler;
 import j3ff97.elementalmelons.init.ModBlocks;
 import j3ff97.elementalmelons.init.ModItems;
 import j3ff97.elementalmelons.proxy.IProxy;
@@ -26,8 +27,8 @@ public class ElementalMelons
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)
     {
-        ModItems.init();
         ModBlocks.init();
+        ModItems.init();
 
         GameRegistry.registerWorldGenerator(new ElementalMelonWorldGen(), 0);
 
@@ -38,6 +39,7 @@ public class ElementalMelons
     public static void Init(FMLInitializationEvent event)
     {
 
+        CraftingHandler.initRecipes();
         LogHelper.info("Elemental Melons: Successful Init");
     }
 

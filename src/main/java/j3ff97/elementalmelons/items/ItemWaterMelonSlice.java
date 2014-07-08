@@ -18,6 +18,6 @@ public class ItemWaterMelonSlice extends ItemFood
 
     public void registerIcons(IIconRegister icon)
     {
-        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "WaterMelonSlice");
+        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "slice_water_melon");
     }
 }

@@ -3,14 +3,20 @@ package j3ff97.elementalmelons.blocks;
 import j3ff97.elementalmelons.handler.CreativeTab;
 import j3ff97.elementalmelons.init.ModItems;
 import j3ff97.elementalmelons.reference.Names;
+import j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 
 import java.util.Random;
 
 public class BlockWaterMelon extends Block
 {
+    public static IIcon topIcon;
+    public static IIcon sideIcon;
+
     public BlockWaterMelon(Material material)
     {
         super(material);
@@ -29,5 +35,24 @@ public class BlockWaterMelon extends Block
     public int quantityDropped(Random random)
     {
         return 3 + random.nextInt(5);
+    }
+
+    public void registerBlockIcons(IIconRegister icon)
+    {
+        sideIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":water_melon_side");
+        topIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":water_melon_top");
+    }
+
+    @Override
+    public IIcon getIcon(int side, int metadata)
+    {
+        if(side == 1)
+    {
+        return topIcon;
+    }
+    else
+    {
+        return sideIcon;
+    }
     }
 }

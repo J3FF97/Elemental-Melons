@@ -4,7 +4,6 @@ import j3ff97.elementalmelons.handler.CreativeTab;
 import j3ff97.elementalmelons.reference.Names;
 import j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 
 public class ItemSkyMelonSlice extends ItemFood
@@ -19,7 +18,7 @@ public class ItemSkyMelonSlice extends ItemFood
 
     public void registerIcons(IIconRegister icon)
     {
-        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "SkyMelonSlice");
+        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "slice_sky_melon");
     }
 
 
