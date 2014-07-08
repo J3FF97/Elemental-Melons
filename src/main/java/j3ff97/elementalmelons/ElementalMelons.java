@@ -13,6 +13,7 @@ import j3ff97.elementalmelons.proxy.IProxy;
 import j3ff97.elementalmelons.reference.Reference;
 import j3ff97.elementalmelons.utility.LogHelper;
 import j3ff97.elementalmelons.worldgen.ElementalMelonWorldGen;
+import j3ff97.elementalmelons.worldgen.SeedDrops;
 
 @Mod(modid = Reference.ID, name = Reference.NAME, version = Reference.VERSION)
 
@@ -29,8 +30,8 @@ public class ElementalMelons
     {
         ModBlocks.init();
         ModItems.init();
+        SeedDrops.init();
 
-        GameRegistry.registerWorldGenerator(new ElementalMelonWorldGen(), 0);
 
         LogHelper.info("Elemental Melons: Successful PreInit");
     }
