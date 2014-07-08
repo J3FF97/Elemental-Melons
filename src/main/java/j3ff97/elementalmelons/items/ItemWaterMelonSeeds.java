@@ -5,7 +5,6 @@ import j3ff97.elementalmelons.reference.Names;
 import j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 
 public class ItemWaterMelonSeeds extends ItemSeeds
