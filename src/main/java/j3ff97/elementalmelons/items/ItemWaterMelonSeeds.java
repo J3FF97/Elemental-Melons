@@ -19,6 +19,6 @@ public class ItemWaterMelonSeeds extends ItemSeeds
 
     public void registerIcons(IIconRegister icon)
     {
-        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "WaterMelonSeeds");
+        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "seeds_water_melon");
     }
 }

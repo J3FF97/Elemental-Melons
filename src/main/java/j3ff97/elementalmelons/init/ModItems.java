@@ -4,7 +4,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import j3ff97.elementalmelons.items.*;
 import j3ff97.elementalmelons.reference.Names;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemFood;
 
 public class ModItems
 {
@@ -23,7 +22,7 @@ public class ModItems
         earthMelonSlice = new ItemEarthMelonSlice(2, 0.3f, false);
         waterMelonSlice = new ItemWaterMelonSlice(2, 0.3f, false);
         fireMelonSlice = new ItemFireMelonSlice(2, 0.3f, false);
-        skyMelonSeeds = new ItemSkyMelonSeeds(ModBlocks.skyMelonStem, Blocks.farmland);
+        skyMelonSeeds = new ItemSkyMelonSeeds();
         earthMelonSeeds = new ItemEarthMelonSeeds(ModBlocks.earthMelonStem, Blocks.farmland);
         waterMelonSeeds = new ItemWaterMelonSeeds(ModBlocks.waterMelonStem, Blocks.farmland);
         fireMelonSeeds = new ItemFireMelonSeeds(ModBlocks.fireMelonStem, Blocks.farmland);

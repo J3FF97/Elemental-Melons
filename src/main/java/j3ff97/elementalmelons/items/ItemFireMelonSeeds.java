@@ -18,6 +18,6 @@ public class ItemFireMelonSeeds extends ItemSeeds
 
     public void registerIcons(IIconRegister icon)
     {
-        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "FireMelonSeeds");
+        itemIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + "seeds_fire_melon");
     }
 }
