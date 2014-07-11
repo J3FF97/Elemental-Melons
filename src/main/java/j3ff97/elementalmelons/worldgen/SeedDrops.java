@@ -8,9 +8,9 @@ public class SeedDrops
 {
     public static void init()
     {
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.earthMelonSeeds), 3);
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.fireMelonSeeds), 3);
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.skyMelonSeeds), 3);
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.waterMelonSeeds), 3);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.earthMelonSeeds), 1);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.fireMelonSeeds), 1);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.skyMelonSeeds), 1);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.waterMelonSeeds), 1);
     }
 }

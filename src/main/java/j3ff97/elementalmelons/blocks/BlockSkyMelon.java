@@ -25,6 +25,7 @@ public class BlockSkyMelon extends Block
         this.setResistance(5F);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
         this.setStepSound(Block.soundTypeWood);
+        this.setLightLevel(0.5F);
     }
 
     public Item getItemDropped(int par1, Random random, int par2)
