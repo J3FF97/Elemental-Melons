@@ -12,6 +12,7 @@ import j3ff97.elementalmelons.init.ModItems;
 import j3ff97.elementalmelons.proxy.IProxy;
 import j3ff97.elementalmelons.reference.Reference;
 import j3ff97.elementalmelons.utility.LogHelper;
+import j3ff97.elementalmelons.worldgen.MelonGen;
 import j3ff97.elementalmelons.worldgen.SeedDrops;
 
 @Mod(modid = Reference.ID, name = Reference.NAME, version = Reference.VERSION)
@@ -23,6 +24,7 @@ public class ElementalMelons
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
     public static IProxy proxy;
+
 
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)
@@ -39,6 +41,7 @@ public class ElementalMelons
     public static void Init(FMLInitializationEvent event)
     {
         CraftingHandler.initRecipes();
+        GameRegistry.registerWorldGenerator(new MelonGen(), 1);
         LogHelper.info("Elemental Melons: Successful Init");
     }
 

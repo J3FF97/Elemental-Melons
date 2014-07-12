@@ -19,6 +19,7 @@ public class ItemSkyMelonSlice extends ItemFood
         this.setCreativeTab(CreativeTab.tabElementalMelons);
         this.setPotionEffect(8, 20, 0, 1f);
         this.setAlwaysEdible();
+
     }
 
     @Override
