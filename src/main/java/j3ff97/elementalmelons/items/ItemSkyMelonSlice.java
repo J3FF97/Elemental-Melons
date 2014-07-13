@@ -17,7 +17,7 @@ public class ItemSkyMelonSlice extends ItemFood
         super(hunger, saturation,isWolfFood);
         this.setUnlocalizedName(Names.skyMelonSlice_unlocalizedName);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
-        this.setPotionEffect(8, 20, 0, 1f);
+        this.setPotionEffect(8, 20, 2, 1f);
         this.setAlwaysEdible();
 
     }

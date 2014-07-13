@@ -1,5 +1,6 @@
 package j3ff97.elementalmelons.handler;
 
+import j3ff97.elementalmelons.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -11,7 +12,7 @@ public class CreativeTab
     {
         public ItemStack getIconItemStack()
         {
-            return new ItemStack(Items.melon);
+            return new ItemStack(ModItems.skyMelonSlice);
         }
 
         @Override

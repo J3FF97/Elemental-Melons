@@ -31,7 +31,7 @@ public class ElementalMelons
     {
         ModBlocks.init();
         ModItems.init();
-        SeedDrops.init();
+        //SeedDrops.init();
 
 
         LogHelper.info("Elemental Melons: Successful PreInit");
