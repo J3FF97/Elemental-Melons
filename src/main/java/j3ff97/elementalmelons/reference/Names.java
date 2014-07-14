@@ -11,6 +11,13 @@ public class Names
     public static final String earthMelonSeeds_unlocalizedName = "earthMelonSeeds";
     public static final String waterMelonSeeds_unlocalizedName = "waterMelonSeeds";
     public static final String fireMelonSeeds_unlocalizedName = "fireMelonSeeds";
+    public static final String itemCrystalPurifier_unlocalizedName = "itemCrystalPurifier";
+    public static final String itemMelonJuice_unlocalizedName = "itemMelonJuice";
+    public static final String itemSkyMelonJuice_unlocalizedName = "itemSkyMelonJuice";
+    public static final String itemWaterMelonJuice_unlocalizedName = "itemWaterMelonJuice";
+    public static final String itemEarthMelonJuice_unlocalizedName = "itemEarthMelonJuice";
+    public static final String itemFireMelonJuice_unlocalizedName = "itemFireMelonJuice";
+    public static final String itemSqueezer_unlocalizedName = "itemSqueezer";
 
     //Blocks
     public static final String blockSkyMelon_unlocalizedName = "blockSkyMelon";

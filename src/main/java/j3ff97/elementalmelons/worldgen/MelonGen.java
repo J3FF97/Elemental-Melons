@@ -36,7 +36,7 @@ public class MelonGen implements IWorldGenerator
         private void generateSurface(World world, Random random, int x, int z)
         {
             addOreSpawn(ModBlocks.blockWaterMelon, world, random, Blocks.water, x, z, 8, 8, 3, 2, 0, 256);
-            addOreSpawn(ModBlocks.blockEarthMelon, world, random, Blocks.dirt, x, z, 8, 8, 3, 10, 0, 256);
+            addOreSpawn(ModBlocks.blockEarthMelon, world, random, Blocks.stone, x, z, 8, 8, 3, 10, 0, 256);
 
         }
 

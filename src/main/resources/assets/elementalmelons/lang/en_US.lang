@@ -7,6 +7,13 @@ item.skyMelonSeeds.name=Sky Melon Seeds
 item.earthMelonSeeds.name=Earth Melon Seeds
 item.waterMelonSeeds.name=Water Melon Seeds
 item.fireMelonSeeds.name=Fire Melon Seeds
+item.itemMelonJuice.name=Melon Juice
+item.itemSkyMelonJuice.name=Sky Melon Juice
+item.itemWaterMelonJuice.name=Water Melon Juice
+item.itemEarthMelonJuice.name=Earth Melon Juice
+item.itemFireMelonJuice.name=Fire Melon Juice
+item.itemSqueezer.name=Squeezer
+item.itemCrystalPurifier.name=Crystal Purifier
 
 --Blocks--
 tile.blockSkyMelon.name=Sky Melon
