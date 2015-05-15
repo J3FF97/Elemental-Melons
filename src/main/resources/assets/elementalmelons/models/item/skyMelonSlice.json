@@ -1,0 +1,7 @@
+{
+  "parent":"elementalmelons:item/itemTemplate",
+  "textures":
+  {
+    "layer0":"elementalmelons:items/skyMelonSlice"
+  }
+}

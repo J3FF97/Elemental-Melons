@@ -1,0 +1,7 @@
+{
+"parent": "block/cube_column",
+"textures": {
+"end": "elementalmelons:blocks/blockFireMelon_top",
+"side": "elementalmelons:blocks/blockFireMelon_side"
+}
+}
