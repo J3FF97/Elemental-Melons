@@ -28,6 +28,7 @@ public  final class Names
     public static final String earthMelonStemname = "earthMelonStem";
     public static final String waterMelonStemname = "waterMelonStem";
     public static final String fireMelonStemname = "fireMelonStem";
+    public static final String stemName = "pumpkinStem";
 
     public static final class Text
     {

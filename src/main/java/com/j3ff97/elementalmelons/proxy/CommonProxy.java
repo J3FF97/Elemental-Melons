@@ -15,17 +15,20 @@ public class CommonProxy
     public void preInit(FMLPreInitializationEvent e)
     {
 
+        ModBlocks.initStems();
+
         ModItems.init();
         LogHelper.info("Elemental Melons: Initialized Items");
 
         ModBlocks.init();
         LogHelper.info("Elemental Melons: Initialized Blocks");
 
+
+
     }
 
     public void init(FMLInitializationEvent e)
     {
-
 
         CraftingHandler.initRecipes();
         LogHelper.info("Elemental Melons: Initialized Crafting");
