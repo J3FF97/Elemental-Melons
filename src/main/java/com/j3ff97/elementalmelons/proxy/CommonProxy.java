@@ -14,14 +14,15 @@ public class CommonProxy
 {
     public void preInit(FMLPreInitializationEvent e)
     {
-
-        ModBlocks.initStems();
-
         ModItems.init();
         LogHelper.info("Elemental Melons: Initialized Items");
 
         ModBlocks.init();
         LogHelper.info("Elemental Melons: Initialized Blocks");
+
+        ModBlocks.initStems();
+
+        ModItems.initSeeds();
 
 
 

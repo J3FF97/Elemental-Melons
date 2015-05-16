@@ -1,0 +1,6 @@
+{
+  "parent": "elementalmelons:block/stem_growth3",
+  "textures": {
+    "stem": "blocks/melon_stem_disconnected"
+  }
+}

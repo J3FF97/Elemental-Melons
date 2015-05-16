@@ -1,8 +1,8 @@
 package com.j3ff97.elementalmelons.init;
 
 
-
-import com.j3ff97.elementalmelons.items.*;
+import com.j3ff97.elementalmelons.items.ItemSeedEM;
+import com.j3ff97.elementalmelons.items.ItemSliceEM;
 import com.j3ff97.elementalmelons.reference.Names;
 import com.j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.client.Minecraft;
@@ -25,11 +25,6 @@ public class ModItems
 
     public static void init()
     {
-        skyMelonSeeds = new ItemSeedEM(ModBlocks.skyMelonStem, Blocks.farmland, Names.skyMelonSeedsname);
-        earthMelonSeeds = new ItemSeedEM(ModBlocks.earthMelonStem, Blocks.farmland, Names.earthMelonSeedsname);
-        waterMelonSeeds = new ItemSeedEM(ModBlocks.waterMelonStem, Blocks.farmland, Names.waterMelonSeedsname);
-        fireMelonSeeds = new ItemSeedEM(ModBlocks.fireMelonStem, Blocks.farmland, Names.fireMelonSeedsname);
-
         skyMelonSlice = new ItemSliceEM(2, 0.3f, false, Names.skyMelonSlicename, 3, Names.Text.skySliceText);
         earthMelonSlice = new ItemSliceEM(2, 0.3f, false, Names.earthMelonSlicename, 5, Names.Text.earthSliceText);
         waterMelonSlice = new ItemSliceEM(2, 0.3f, false, Names.waterMelonSlicename, 13, Names.Text.waterSliceText);
@@ -38,16 +33,26 @@ public class ModItems
         registerItems();
     }
 
+    public static void initSeeds()
+    {
+        skyMelonSeeds = new ItemSeedEM(ModBlocks.skyMelonStem, Blocks.farmland, Names.skyMelonSeedsname);
+        earthMelonSeeds = new ItemSeedEM(ModBlocks.earthMelonStem, Blocks.farmland, Names.earthMelonSeedsname);
+        waterMelonSeeds = new ItemSeedEM(ModBlocks.waterMelonStem, Blocks.farmland, Names.waterMelonSeedsname);
+        fireMelonSeeds = new ItemSeedEM(ModBlocks.fireMelonStem, Blocks.farmland, Names.fireMelonSeedsname);
+
+        GameRegistry.registerItem(skyMelonSeeds, Names.skyMelonSeedsname);
+        GameRegistry.registerItem(earthMelonSeeds, Names.earthMelonSeedsname);
+        GameRegistry.registerItem(waterMelonSeeds, Names.waterMelonSeedsname);
+        GameRegistry.registerItem(fireMelonSeeds, Names.fireMelonSeedsname);
+    }
+
     public static void registerItems()
     {
         GameRegistry.registerItem(skyMelonSlice, Names.skyMelonSlicename);
         GameRegistry.registerItem(earthMelonSlice, Names.earthMelonSlicename);
         GameRegistry.registerItem(waterMelonSlice, Names.waterMelonSlicename);
         GameRegistry.registerItem(fireMelonSlice, Names.fireMelonSlicename);
-        GameRegistry.registerItem(skyMelonSeeds, Names.skyMelonSeedsname);
-        GameRegistry.registerItem(earthMelonSeeds, Names.earthMelonSeedsname);
-        GameRegistry.registerItem(waterMelonSeeds, Names.waterMelonSeedsname);
-        GameRegistry.registerItem(fireMelonSeeds, Names.fireMelonSeedsname);
+
     }
 
     public static void registerItemRenderer()

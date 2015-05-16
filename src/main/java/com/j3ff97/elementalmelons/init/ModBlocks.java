@@ -37,10 +37,10 @@ public class ModBlocks
 
     public static void initStems()
     {
-        skyMelonStem = new BlockStemEM(blockSkyMelon, Names.stemName);
-        earthMelonStem = new BlockStemEM(blockEarthMelon, Names.stemName);
-        waterMelonStem = new BlockStemEM(blockWaterMelon,Names.stemName);
-        fireMelonStem = new BlockStemEM(blockFireMelon, Names.stemName);
+        skyMelonStem = new BlockStemEM(blockSkyMelon, Names.skyMelonStemname);
+        earthMelonStem = new BlockStemEM(blockEarthMelon, Names.earthMelonStemname);
+        waterMelonStem = new BlockStemEM(blockWaterMelon,Names.waterMelonStemname);
+        fireMelonStem = new BlockStemEM(blockFireMelon, Names.fireMelonStemname);
 
         GameRegistry.registerBlock(skyMelonStem, Names.skyMelonStemname);
         GameRegistry.registerBlock(earthMelonStem, Names.earthMelonStemname);
@@ -63,21 +63,15 @@ public class ModBlocks
         registerModel(blockWaterMelon, Names.blockWaterMelonname);
         registerModel(blockFireMelon, Names.blockFireMelonname);
 
-        registerModel(skyMelonStem, Names.stemName);
-        registerModel(earthMelonStem, Names.stemName);
-        registerStemModel(waterMelonStem, Names.stemName);
-        registerStemModel(fireMelonStem, Names.stemName);
+        registerModel(skyMelonStem, Names.skyMelonStemname);
+        registerModel(earthMelonStem, Names.earthMelonStemname);
+        registerModel(waterMelonStem, Names.waterMelonStemname);
+        registerModel(fireMelonStem, Names.fireMelonStemname);
     }
 
     public static void registerModel(Block block, String blockName)
     {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
                 .register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Reference.ID + ":" + blockName, "inventory"));
-    }
-
-    public static void registerStemModel(Block block, String name)
-    {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-                .register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(name, "inventory"));
     }
 }
