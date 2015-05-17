@@ -3,9 +3,9 @@ package com.j3ff97.elementalmelons.handler;
 
 import com.j3ff97.elementalmelons.init.ModBlocks;
 import com.j3ff97.elementalmelons.init.ModItems;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class CraftingHandler
 {
@@ -13,6 +13,7 @@ public class CraftingHandler
     {
         initCraftingRecipes();
         initShapelessRecipes();
+        initJuicerRecipes();
         initSmeltingRecipes();
         initPotionRecipes();
     }
@@ -32,6 +33,11 @@ public class CraftingHandler
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.fireMelonSeeds), new ItemStack(ModItems.fireMelonSlice));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.waterMelonSeeds), new ItemStack(ModItems.waterMelonSlice));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.earthMelonSeeds), new ItemStack(ModItems.earthMelonSlice));
+    }
+
+    public static void initJuicerRecipes()
+    {
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.earthMelonSeeds), new ItemStack(ModItems.itemJuicer,1, OreDictionary.WILDCARD_VALUE), new ItemStack(ModItems.fireMelonSeeds));
     }
 
     public static void initSmeltingRecipes()

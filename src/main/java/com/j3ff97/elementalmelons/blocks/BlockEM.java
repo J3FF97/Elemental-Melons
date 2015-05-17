@@ -4,37 +4,17 @@ import com.j3ff97.elementalmelons.handler.CreativeTab;
 import com.j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.item.Item;
-
-import java.util.Random;
 
 public class BlockEM extends Block
 {
-    public Item breakItem;
-
-    public BlockEM(String name, Material material, float hardness, float resistance, SoundType stepSound, Item breakItem, float lightLevel)
+    public BlockEM(Material material, String name, SoundType stepsound, float hardness, float resistance)
     {
         super(material);
         this.setUnlocalizedName(name);
+        this.setStepSound(stepsound);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
-        this.setLightLevel(lightLevel);
         this.setHardness(hardness);
         this.setResistance(resistance);
-        this.setStepSound(stepSound);
-        this.breakItem = breakItem;
-    }
-
-    @Override
-    public Item getItemDropped(IBlockState state, Random random, int fortune)
-    {
-        return breakItem;
-    }
-
-    @Override
-    public int quantityDropped(Random random)
-    {
-        return 3 + random.nextInt(5);
     }
 
     @Override

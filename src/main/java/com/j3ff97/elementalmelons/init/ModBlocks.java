@@ -1,6 +1,8 @@
 package com.j3ff97.elementalmelons.init;
 
 import com.j3ff97.elementalmelons.blocks.BlockEM;
+import com.j3ff97.elementalmelons.blocks.BlockMelonEM;
+import com.j3ff97.elementalmelons.blocks.BlockSeedInfuser;
 import com.j3ff97.elementalmelons.blocks.BlockStemEM;
 import com.j3ff97.elementalmelons.reference.Names;
 import com.j3ff97.elementalmelons.reference.Reference;
@@ -13,24 +15,26 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks
 {
-    public static BlockEM     blockSkyMelon;
-    public static BlockEM     blockEarthMelon;
-    public static BlockEM     blockWaterMelon;
-    public static BlockEM     blockFireMelon;
-    public static BlockStemEM skyMelonStem;
-    public static BlockStemEM earthMelonStem;
-    public static BlockStemEM waterMelonStem;
-    public static BlockStemEM fireMelonStem;
+    public static BlockMelonEM blockSkyMelon;
+    public static BlockMelonEM blockEarthMelon;
+    public static BlockMelonEM blockWaterMelon;
+    public static BlockMelonEM blockFireMelon;
+    public static BlockStemEM  skyMelonStem;
+    public static BlockStemEM  earthMelonStem;
+    public static BlockStemEM  waterMelonStem;
+    public static BlockStemEM  fireMelonStem;
+
+    public static BlockSeedInfuser blockSeedInfuser;
 
     public static void init()
     {
 
-        blockSkyMelon = new BlockEM(Names.blockSkyMelonname, Material.gourd, 1F, 5F, BlockEM.soundTypeWood, ModItems.skyMelonSlice, 0.5F );
-        blockEarthMelon = new BlockEM(Names.blockEarthMelonname, Material.gourd, 1F, 5F, BlockEM.soundTypeWood, ModItems.earthMelonSlice, 0.5F );
-        blockWaterMelon = new BlockEM(Names.blockWaterMelonname, Material.gourd, 1F, 5F, BlockEM.soundTypeWood, ModItems.waterMelonSlice, 0.5F );
-        blockFireMelon = new BlockEM(Names.blockFireMelonname, Material.gourd, 1F, 5F, BlockEM.soundTypeWood, ModItems.fireMelonSlice, 0.5F );
+        blockSkyMelon = new BlockMelonEM(Names.blockSkyMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.skyMelonSlice, 0.5F);
+        blockEarthMelon = new BlockMelonEM(Names.blockEarthMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.earthMelonSlice, 0.5F);
+        blockWaterMelon = new BlockMelonEM(Names.blockWaterMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.waterMelonSlice, 0.5F);
+        blockFireMelon = new BlockMelonEM(Names.blockFireMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.fireMelonSlice, 0.5F );
 
-
+        blockSeedInfuser = new BlockSeedInfuser(Material.rock,Names.blockSeedInfusername, BlockEM.soundTypeStone, 3F, 15F);
 
         registerBlocks();
     }
@@ -54,6 +58,8 @@ public class ModBlocks
         GameRegistry.registerBlock(blockWaterMelon, Names.blockWaterMelonname);
         GameRegistry.registerBlock(blockFireMelon, Names.blockFireMelonname);
 
+        GameRegistry.registerBlock(blockSeedInfuser, Names.blockSeedInfusername);
+
     }
 
     public static void registerBlockRenderer()
@@ -67,6 +73,8 @@ public class ModBlocks
         registerModel(earthMelonStem, Names.earthMelonStemname);
         registerModel(waterMelonStem, Names.waterMelonStemname);
         registerModel(fireMelonStem, Names.fireMelonStemname);
+
+        registerModel(blockSeedInfuser, Names.blockSeedInfusername);
     }
 
     public static void registerModel(Block block, String blockName)

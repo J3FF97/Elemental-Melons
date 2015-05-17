@@ -3,16 +3,18 @@ item.elementalmelons:skyMelonSlice.name=Sky Melon
 item.elementalmelons:earthMelonSlice.name=Earth Melon
 item.elementalmelons:waterMelonSlice.name=Water Melon
 item.elementalmelons:fireMelonSlice.name=Fire Melon
+
 item.elementalmelons:skyMelonSeeds.name=Sky Melon Seeds
 item.elementalmelons:earthMelonSeeds.name=Earth Melon Seeds
 item.elementalmelons:waterMelonSeeds.name=Water Melon Seeds
 item.elementalmelons:fireMelonSeeds.name=Fire Melon Seeds
+
 item.elementalmelons:itemMelonJuice.name=Melon Juice
 item.elementalmelons:itemSkyMelonJuice.name=Sky Melon Juice
 item.elementalmelons:itemWaterMelonJuice.name=Water Melon Juice
 item.elementalmelons:itemEarthMelonJuice.name=Earth Melon Juice
 item.elementalmelons:itemFireMelonJuice.name=Fire Melon Juice
-item.elementalmelons:itemSqueezer.name=Squeezer
+item.elementalmelons:itemJuices.name=Juicer
 item.elementalmelons:itemCrystalPurifier.name=Crystal Purifier
 
 --Blocks--
@@ -20,6 +22,7 @@ tile.elementalmelons:blockSkyMelon.name=Sky Melon
 tile.elementalmelons:blockEarthMelon.name=Earth Melon
 tile.elementalmelons:blockWaterMelon.name=Water Melon
 tile.elementalmelons:blockFireMelon.name=Fire Melon
+tile.elementalmelons:blockSeedInfuser.name=Seed Infuser
 
 --Messages--
 SkySlice.message=Gives Haste for 20 seconds

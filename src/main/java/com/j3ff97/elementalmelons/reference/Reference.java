@@ -9,4 +9,6 @@ public class Reference
     public static final String CLIENT_PROXY      = "com.j3ff97.elementalmelons.proxy.ClientProxy";
     public static final String SERVER_PROXY      = "com.j3ff97.elementalmelons.proxy.ServerProxy";
 
+//Dependencies
+    public static final String NEI = "NotEnoughItems";
 }
