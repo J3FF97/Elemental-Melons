@@ -51,6 +51,7 @@ public class MelonGen implements IWorldGenerator
         * @param block Block to spawn
         * @param world World to spawn in
         * @param random Random object for retrieving random positions within the world to spawn the Block
+        * @param target The target of this block, what to replace.
         * @param blockXPos int for passing the X-Coordinate for the Generation method
         * @param blockZPos int for passing the Z-Coordinate for the Generation method
         * @param maxX int for setting the maximum X-Coordinate values for spawning on the X-Axis on a Per-Chunk basis

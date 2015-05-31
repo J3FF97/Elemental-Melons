@@ -31,12 +31,6 @@ public class CraftingHandler
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.fireMelonSeeds), new ItemStack(ModItems.fireMelonSlice));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.waterMelonSeeds), new ItemStack(ModItems.waterMelonSlice));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.earthMelonSeeds), new ItemStack(ModItems.earthMelonSlice));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemMelonJuice), new ItemStack(ModItems.itemSqueezer), new ItemStack(Items.melon), new ItemStack(Items.glass_bottle));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemSkyMelonJuice), new ItemStack(ModItems.itemCrystalPurifier), new ItemStack(ModItems.skyMelonSlice), new ItemStack(Items.glass_bottle));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemWaterMelonJuice), new ItemStack(ModItems.itemCrystalPurifier), new ItemStack(ModItems.waterMelonSlice), new ItemStack(Items.glass_bottle));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemFireMelonJuice), new ItemStack(ModItems.itemCrystalPurifier), new ItemStack(ModItems.fireMelonSlice), new ItemStack(Items.glass_bottle));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemEarthMelonJuice), new ItemStack(ModItems.itemCrystalPurifier), new ItemStack(ModItems.earthMelonSlice), new ItemStack(Items.glass_bottle));
-
     }
 
     public static void initSmeltingRecipes()

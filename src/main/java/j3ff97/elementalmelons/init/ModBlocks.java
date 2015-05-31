@@ -9,37 +9,42 @@ import net.minecraft.block.material.Material;
 
 public class ModBlocks
 {
-    public static Block     blockSkyMelon;
-    public static Block     blockEarthMelon;
-    public static Block     blockWaterMelon;
-    public static Block     blockFireMelon;
-    public static BlockStem skyMelonStem;
-    public static BlockStem earthMelonStem;
-    public static BlockStem waterMelonStem;
-    public static BlockStem fireMelonStem;
+    public static BlockMelonEM     blockSkyMelon;
+    public static BlockMelonEM     blockEarthMelon;
+    public static BlockMelonEM     blockWaterMelon;
+    public static BlockMelonEM     blockFireMelon;
+    public static BlockStemEM skyMelonStem;
+    public static BlockStemEM earthMelonStem;
+    public static BlockStemEM waterMelonStem;
+    public static BlockStemEM fireMelonStem;
 
     public static void init()
     {
 
-        blockSkyMelon = new BlockSkyMelon(Material.gourd);
-        blockEarthMelon = new BlockEarthMelon(Material.gourd);
-        blockWaterMelon = new BlockWaterMelon(Material.gourd);
-        blockFireMelon = new BlockFireMelon(Material.gourd);
-        skyMelonStem = new SkyMelonStem(blockSkyMelon);
-        earthMelonStem = new EarthMelonStem(blockEarthMelon);
-        waterMelonStem = new WaterMelonStem(blockWaterMelon);
-        fireMelonStem = new FireMelonStem(blockFireMelon);
+        blockSkyMelon = new BlockMelonEM(Names.blockSkyMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.skyMelonSlice, 0.5F);
+        blockEarthMelon = new BlockMelonEM(Names.blockEarthMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.earthMelonSlice, 0.5F);
+        blockWaterMelon = new BlockMelonEM(Names.blockWaterMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.waterMelonSlice, 0.5F);
+        blockFireMelon = new BlockMelonEM(Names.blockFireMelonname, Material.gourd, 1F, 5F, BlockMelonEM.soundTypeWood, ModItems.fireMelonSlice, 0.5F );
+
+        GameRegistry.registerBlock(blockSkyMelon, Names.blockSkyMelonname);
+        GameRegistry.registerBlock(blockEarthMelon, Names.blockEarthMelonname);
+        GameRegistry.registerBlock(blockWaterMelon, Names.blockWaterMelonname);
+        GameRegistry.registerBlock(blockFireMelon, Names.blockFireMelonname);
+
+    }
+
+    public static void initStems()
+    {
+        skyMelonStem = new BlockStemEM(blockSkyMelon, Names.skyMelonStemname);
+        earthMelonStem = new BlockStemEM(blockEarthMelon, Names.earthMelonStemname);
+        waterMelonStem = new BlockStemEM(blockWaterMelon, Names.waterMelonStemname);
+        fireMelonStem = new BlockStemEM(blockFireMelon, Names.fireMelonStemname);
+
+        GameRegistry.registerBlock(skyMelonStem, Names.skyMelonStemname);
+        GameRegistry.registerBlock(earthMelonStem, Names.earthMelonStemname);
+        GameRegistry.registerBlock(waterMelonStem, Names.waterMelonStemname);
+        GameRegistry.registerBlock(fireMelonStem, Names.fireMelonStemname);
 
 
-
-
-        GameRegistry.registerBlock(blockSkyMelon, Names.blockSkyMelon_unlocalizedName);
-        GameRegistry.registerBlock(blockEarthMelon, Names.blockEarthMelon_unlocalizedName);
-        GameRegistry.registerBlock(blockWaterMelon, Names.blockWaterMelon_unlocalizedName);
-        GameRegistry.registerBlock(blockFireMelon, Names.blockFireMelon_unlocalizedName);
-        GameRegistry.registerBlock(skyMelonStem, Names.skyMelonStem_unlocalizedName);
-        GameRegistry.registerBlock(earthMelonStem, Names.earthMelonStem_unlocalizedName);
-        GameRegistry.registerBlock(waterMelonStem, Names.waterMelonStem_unlocalizedName);
-        GameRegistry.registerBlock(fireMelonStem, Names.fireMelonStem_unlocalizedName);
     }
 }

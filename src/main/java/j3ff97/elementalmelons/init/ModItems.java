@@ -7,54 +7,40 @@ import net.minecraft.init.Blocks;
 
 public class ModItems
 {
-    public static ItemSkyMelonSlice   skyMelonSlice;
-    public static ItemEarthMelonSlice earthMelonSlice;
-    public static ItemWaterMelonSlice waterMelonSlice;
-    public static ItemFireMelonSlice  fireMelonSlice;
-    public static ItemSkyMelonSeeds   skyMelonSeeds;
-    public static ItemEarthMelonSeeds earthMelonSeeds;
-    public static ItemWaterMelonSeeds waterMelonSeeds;
-    public static ItemFireMelonSeeds  fireMelonSeeds;
-    public static ItemSkyMelonJuice   itemSkyMelonJuice;
-    public static ItemEarthMelonJuice itemEarthMelonJuice;
-    public static ItemWaterMelonJuice itemWaterMelonJuice;
-    public static ItemFireMelonJuice  itemFireMelonJuice;
-    public static ItemMelonJuice      itemMelonJuice;
-    public static ItemSqueezer        itemSqueezer;
-    public static ItemCrystalPurifier itemCrystalPurifier;
+    public static ItemSeedEM  skyMelonSeeds;
+    public static ItemSeedEM  earthMelonSeeds;
+    public static ItemSeedEM  waterMelonSeeds;
+    public static ItemSeedEM  fireMelonSeeds;
+    public static ItemFoodEM skyMelonSlice;
+    public static ItemFoodEM earthMelonSlice;
+    public static ItemFoodEM waterMelonSlice;
+    public static ItemFoodEM fireMelonSlice;
 
     public static void init()
     {
-        skyMelonSlice = new ItemSkyMelonSlice(2, 0.3f, false);
-        earthMelonSlice = new ItemEarthMelonSlice(2, 0.3f, false);
-        waterMelonSlice = new ItemWaterMelonSlice(2, 0.3f, false);
-        fireMelonSlice = new ItemFireMelonSlice(2, 0.3f, false);
-        skyMelonSeeds = new ItemSkyMelonSeeds(ModBlocks.skyMelonStem, Blocks.farmland);
-        earthMelonSeeds = new ItemEarthMelonSeeds(ModBlocks.earthMelonStem, Blocks.farmland);
-        waterMelonSeeds = new ItemWaterMelonSeeds(ModBlocks.waterMelonStem, Blocks.farmland);
-        fireMelonSeeds = new ItemFireMelonSeeds(ModBlocks.fireMelonStem, Blocks.farmland);
-        itemSkyMelonJuice = new ItemSkyMelonJuice(3, 0.5f, false);
-        itemEarthMelonJuice = new ItemEarthMelonJuice(3, 0.5f, false);
-        itemWaterMelonJuice = new ItemWaterMelonJuice(3, 0.5f, false);
-        itemFireMelonJuice = new ItemFireMelonJuice(3, 0.5f, false);
-        itemMelonJuice = new ItemMelonJuice(3, 0.5f, false);
-        itemSqueezer = new ItemSqueezer();
-        itemCrystalPurifier = new ItemCrystalPurifier();
+        skyMelonSlice = new ItemFoodEM(2, 0.3f, false, Names.skyMelonSlicename, 3, Names.Text.skySliceText);
+        earthMelonSlice = new ItemFoodEM(2, 0.3f, false, Names.earthMelonSlicename, 5, Names.Text.earthSliceText);
+        waterMelonSlice = new ItemFoodEM(2, 0.3f, false, Names.waterMelonSlicename, 13, Names.Text.waterSliceText);
+        fireMelonSlice = new ItemFoodEM(2, 0.3f, false, Names.fireMelonSlicename, 12, Names.Text.fireSliceText);
 
-        GameRegistry.registerItem(skyMelonSlice, Names.skyMelonSlice_unlocalizedName);
-        GameRegistry.registerItem(earthMelonSlice, Names.earthMelonSlice_unlocalizedName);
-        GameRegistry.registerItem(waterMelonSlice, Names.waterMelonSlice_unlocalizedName);
-        GameRegistry.registerItem(fireMelonSlice, Names.fireMelonSlice_unlocalizedName);
-        GameRegistry.registerItem(skyMelonSeeds, Names.skyMelonSeeds_unlocalizedName);
-        GameRegistry.registerItem(earthMelonSeeds, Names.earthMelonSeeds_unlocalizedName);
-        GameRegistry.registerItem(waterMelonSeeds, Names.waterMelonSeeds_unlocalizedName);
-        GameRegistry.registerItem(fireMelonSeeds, Names.fireMelonSeeds_unlocalizedName);
-        GameRegistry.registerItem(itemMelonJuice, Names.itemMelonJuice_unlocalizedName);
-        GameRegistry.registerItem(itemSkyMelonJuice, Names.itemSkyMelonJuice_unlocalizedName);
-        GameRegistry.registerItem(itemEarthMelonJuice, Names.itemEarthMelonJuice_unlocalizedName);
-        GameRegistry.registerItem(itemWaterMelonJuice, Names.itemWaterMelonJuice_unlocalizedName);
-        GameRegistry.registerItem(itemFireMelonJuice, Names.itemFireMelonJuice_unlocalizedName);
-        GameRegistry.registerItem(itemSqueezer, Names.itemSqueezer_unlocalizedName);
-        GameRegistry.registerItem(itemCrystalPurifier, Names.itemCrystalPurifier_unlocalizedName);
+
+        GameRegistry.registerItem(skyMelonSlice, Names.skyMelonSlicename);
+        GameRegistry.registerItem(earthMelonSlice, Names.earthMelonSlicename);
+        GameRegistry.registerItem(waterMelonSlice, Names.waterMelonSlicename);
+        GameRegistry.registerItem(fireMelonSlice, Names.fireMelonSlicename);
+
+    }
+
+    public static void initSeeds()
+    {
+        skyMelonSeeds = new ItemSeedEM(ModBlocks.skyMelonStem, Blocks.farmland, Names.skyMelonSeedsname);
+        earthMelonSeeds = new ItemSeedEM(ModBlocks.earthMelonStem, Blocks.farmland,  Names.earthMelonSeedsname);
+        waterMelonSeeds = new ItemSeedEM(ModBlocks.waterMelonStem, Blocks.farmland, Names.waterMelonSeedsname);
+        fireMelonSeeds = new ItemSeedEM(ModBlocks.fireMelonStem, Blocks.farmland, Names.fireMelonSeedsname);
+
+        GameRegistry.registerItem(skyMelonSeeds, Names.skyMelonSeedsname);
+        GameRegistry.registerItem(earthMelonSeeds, Names.earthMelonSeedsname);
+        GameRegistry.registerItem(waterMelonSeeds, Names.waterMelonSeedsname);
+        GameRegistry.registerItem(fireMelonSeeds, Names.fireMelonSeedsname);
     }
 }
