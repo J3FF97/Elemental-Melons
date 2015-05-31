@@ -1,5 +1,7 @@
 package j3ff97.elementalmelons.blocks;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import j3ff97.elementalmelons.handler.CreativeTab;
 import j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.block.Block;
@@ -12,24 +14,22 @@ import java.util.Random;
 
 public class BlockMelonEM extends Block
 {
-    public        Item  breakItem;
-    public        String name;
-    public static IIcon topIcon;
-    public static IIcon sideIcon;
+    @SideOnly(Side.CLIENT) public static IIcon topIcon;
+    @SideOnly(Side.CLIENT) public static IIcon sideIcon;
+    public  Item   breakItem;
 
 
-    public BlockMelonEM(String name, Material material, float hardness, float resistance, SoundType stepSound, Item breakItem, float lightLevel)
+    public BlockMelonEM(String name, Item breakItem)
     {
-        super(material);
+        super(Material.gourd);
         this.setBlockName(name);
+        this.setBlockTextureName(Reference.ID + ":" + name);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
-        this.setLightLevel(lightLevel);
-        this.setHardness(hardness);
-        this.setResistance(resistance);
-        this.setStepSound(stepSound);
+        this.setHardness(1F);
+        this.setResistance(5F);
+        this.setStepSound(soundTypeWood);
         this.setLightLevel(0.5F);
         this.breakItem = breakItem;
-        this.name = name;
     }
 
     @Override
@@ -41,15 +41,18 @@ public class BlockMelonEM extends Block
     @Override
     public int quantityDropped(Random random)
     {
-        return 3 + random.nextInt(6);
+        return 3 + random.nextInt(5);
     }
 
+    @SideOnly(Side.CLIENT)
+    @Override
     public void registerBlockIcons(IIconRegister icon)
     {
-        sideIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + name + "_side");
-        topIcon = icon.registerIcon(Reference.ID.toLowerCase() + ":" + name + "_top");
+        sideIcon = icon.registerIcon(this.textureName + "_side");
+        topIcon = icon.registerIcon(this.textureName + "_top");
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int side, int metadata)
     {

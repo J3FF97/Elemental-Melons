@@ -5,14 +5,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import j3ff97.elementalmelons.handler.CraftingHandler;
-import j3ff97.elementalmelons.init.ModBlocks;
-import j3ff97.elementalmelons.init.ModItems;
 import j3ff97.elementalmelons.proxy.CommonProxy;
 import j3ff97.elementalmelons.reference.Reference;
 import j3ff97.elementalmelons.utility.LogHelper;
-import j3ff97.elementalmelons.worldgen.MelonGen;
 
 @Mod(modid = Reference.ID, name = Reference.NAME, version = Reference.VERSION)
 
@@ -33,12 +28,6 @@ public class ElementalMelons
         proxy.preInit(event);
 
         LogHelper.info("Elemental Melons: PreInit Complete");
-
-
-
-
-        ModBlocks.init();
-        ModItems.init();
     }
 
     @Mod.EventHandler
@@ -49,11 +38,6 @@ public class ElementalMelons
         proxy.init(event);
 
         LogHelper.info("Elemental Melons: Init Complete");
-
-
-        CraftingHandler.initRecipes();
-        GameRegistry.registerWorldGenerator(new MelonGen(), 1);
-        LogHelper.info("Elemental Melons: Successful Init");
     }
 
     @Mod.EventHandler
@@ -65,9 +49,28 @@ public class ElementalMelons
 
         LogHelper.info("Elemental Melons: Successful PostInit");
         LogHelper.info("Elemental Melons: Initialization Completed, Ready to Nom!");
-
-        LogHelper.info("Elemental Melons: Successful PostInit");
-        LogHelper.info("Elemental Melons: Initialization Completed, Ready to Nom!");
     }
 
+    /**
+    Todo:
+     Tile Seed Infuser
+     Tile Squeezer
+     Block Seed Infuser
+     Block Squeezer
+     Container Seed Infuser
+     Container Squeezer
+     GUI Seed Infuser
+     GUI Squeezer
+     GUI Handler
+     Tile entity init class
+     Recipe Seed Infuser
+     Recipe Squeezer
+     Api
+     Botania support
+     TC support
+     Catalysts
+     Texturing
+     Recipes
+
+     */
 }

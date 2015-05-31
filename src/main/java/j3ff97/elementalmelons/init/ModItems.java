@@ -1,7 +1,9 @@
 package j3ff97.elementalmelons.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import j3ff97.elementalmelons.items.*;
+import j3ff97.elementalmelons.items.ItemCraftingEM;
+import j3ff97.elementalmelons.items.ItemFoodEM;
+import j3ff97.elementalmelons.items.ItemSeedEM;
 import j3ff97.elementalmelons.reference.Names;
 import net.minecraft.init.Blocks;
 
@@ -11,12 +13,27 @@ public class ModItems
     public static ItemSeedEM  earthMelonSeeds;
     public static ItemSeedEM  waterMelonSeeds;
     public static ItemSeedEM  fireMelonSeeds;
+
     public static ItemFoodEM skyMelonSlice;
     public static ItemFoodEM earthMelonSlice;
     public static ItemFoodEM waterMelonSlice;
     public static ItemFoodEM fireMelonSlice;
 
+    public static ItemCraftingEM itemSqueezer;
+
     public static void init()
+    {
+        itemSqueezer = new ItemCraftingEM(Names.itemSqueezername, 256);
+
+        registerItems();
+    }
+
+    public static void registerItems()
+    {
+        GameRegistry.registerItem(itemSqueezer, Names.itemSqueezername);
+    }
+
+    public static void initSlices()
     {
         skyMelonSlice = new ItemFoodEM(2, 0.3f, false, Names.skyMelonSlicename, 3, Names.Text.skySliceText);
         earthMelonSlice = new ItemFoodEM(2, 0.3f, false, Names.earthMelonSlicename, 5, Names.Text.earthSliceText);
@@ -28,9 +45,7 @@ public class ModItems
         GameRegistry.registerItem(earthMelonSlice, Names.earthMelonSlicename);
         GameRegistry.registerItem(waterMelonSlice, Names.waterMelonSlicename);
         GameRegistry.registerItem(fireMelonSlice, Names.fireMelonSlicename);
-
     }
-
     public static void initSeeds()
     {
         skyMelonSeeds = new ItemSeedEM(ModBlocks.skyMelonStem, Blocks.farmland, Names.skyMelonSeedsname);
