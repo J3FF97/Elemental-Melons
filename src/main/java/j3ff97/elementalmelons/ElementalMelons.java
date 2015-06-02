@@ -53,17 +53,11 @@ public class ElementalMelons
 
     /**
     Todo:
-     Tile Seed Infuser
      Tile Squeezer
-     Block Seed Infuser
      Block Squeezer
-     Container Seed Infuser
      Container Squeezer
      GUI Seed Infuser
      GUI Squeezer
-     GUI Handler
-     Tile entity init class
-     Recipe Seed Infuser
      Recipe Squeezer
      Api
      Botania support

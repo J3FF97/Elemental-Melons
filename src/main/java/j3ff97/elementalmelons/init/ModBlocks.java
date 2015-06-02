@@ -1,9 +1,13 @@
 package j3ff97.elementalmelons.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import j3ff97.elementalmelons.blocks.BlockContainerEM;
 import j3ff97.elementalmelons.blocks.BlockMelonEM;
+import j3ff97.elementalmelons.blocks.BlockSeedInfuser;
 import j3ff97.elementalmelons.blocks.BlockStemEM;
 import j3ff97.elementalmelons.reference.Names;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 public class ModBlocks
 {
@@ -16,9 +20,22 @@ public class ModBlocks
     public static BlockStemEM  waterMelonStem;
     public static BlockStemEM  fireMelonStem;
 
+    public static BlockContainerEM seedInfuser;
+    public static BlockContainerEM seedInfuser_on;
+
+
     public static void init()
     {
+        seedInfuser = new BlockSeedInfuser(false,Names.blockSeedInfusername, Material.rock, 3F, 15F, Block.soundTypeStone, "pickaxe", 1);
+        seedInfuser_on = new BlockSeedInfuser(true, Names.blockSeedInfusername, Material.rock, 3F, 15F, Block.soundTypeStone, "pickaxe", 1);
 
+        registerBlocks();
+    }
+
+    public static void registerBlocks()
+    {
+        GameRegistry.registerBlock(seedInfuser, Names.blockSeedInfusername);
+        GameRegistry.registerBlock(seedInfuser_on, Names.blockSeedInfusername + "_on");
     }
 
     public static void initBlocks()

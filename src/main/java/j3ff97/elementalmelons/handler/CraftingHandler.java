@@ -1,6 +1,7 @@
 package j3ff97.elementalmelons.handler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import j3ff97.elementalmelons.crafting.SeedInfuserRecipes;
 import j3ff97.elementalmelons.init.ModBlocks;
 import j3ff97.elementalmelons.init.ModItems;
 import net.minecraft.init.Items;
@@ -14,6 +15,8 @@ public class CraftingHandler
         initShapelessRecipes();
         initSmeltingRecipes();
         initPotionRecipes();
+
+        SeedInfuserRecipes.addInfusing(Items.melon_seeds, Items.magma_cream, new ItemStack(ModItems.fireMelonSeeds));
     }
 
 
