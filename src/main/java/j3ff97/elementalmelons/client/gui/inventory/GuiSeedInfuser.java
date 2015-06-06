@@ -17,7 +17,7 @@ public class GuiSeedInfuser extends GuiContainer
         super(new ContainerSeedInfuser(player, entitySeedInfuser));
         infuser = entitySeedInfuser;
 
-        this.xSize = 178;
+        this.xSize = 176;
         this.ySize = 166;
     }
 

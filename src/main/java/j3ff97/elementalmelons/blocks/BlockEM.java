@@ -7,11 +7,12 @@ import net.minecraft.block.material.Material;
 
 public class BlockEM extends Block
 {
-    public BlockEM(Material material, String name, SoundType stepsound, float hardness, float resistance)
+    public BlockEM(Material material, String name, SoundType stepsound, float hardness, float resistance, String toolClass, int harvestLevel)
     {
         super(material);
         this.setBlockName(name);
         this.setStepSound(stepsound);
+        this.setHarvestLevel(toolClass, harvestLevel);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
         this.setHardness(hardness);
         this.setResistance(resistance);

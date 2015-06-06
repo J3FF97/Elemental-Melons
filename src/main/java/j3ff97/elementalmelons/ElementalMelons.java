@@ -5,6 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import j3ff97.elementalmelons.api.EMApi;
 import j3ff97.elementalmelons.proxy.CommonProxy;
 import j3ff97.elementalmelons.reference.Reference;
 import j3ff97.elementalmelons.utility.LogHelper;
@@ -22,33 +23,35 @@ public class ElementalMelons
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)
     {
-        LogHelper.info("Booting up Elemental Melons!");
+        LogHelper.info("Booting up EleMelons!");
         LogHelper.info("Made by: " + Reference.AUTHOR);
+
+        EMApi.init(new ElemelonsAPI());
 
         proxy.preInit(event);
 
-        LogHelper.info("Elemental Melons: PreInit Complete");
+        LogHelper.info("EleMelons: PreInit Complete");
     }
 
     @Mod.EventHandler
     public static void Init(FMLInitializationEvent event)
     {
-        LogHelper.info("Elemental Melons: Starting Init");
+        LogHelper.info("EleMelons: Starting Init");
 
         proxy.init(event);
 
-        LogHelper.info("Elemental Melons: Init Complete");
+        LogHelper.info("EleMelons: Init Complete");
     }
 
     @Mod.EventHandler
     public static void postInit(FMLPostInitializationEvent event)
     {
-        LogHelper.info("Elemental Melons: Starting PostInit");
+        LogHelper.info("EleMelons: Starting PostInit");
 
         proxy.postInit(event);
 
-        LogHelper.info("Elemental Melons: Successful PostInit");
-        LogHelper.info("Elemental Melons: Initialization Completed, Ready to Nom!");
+        LogHelper.info("EleMelons: Successful PostInit");
+        LogHelper.info("EleMelons: Initialization Completed, Ready to Nom!");
     }
 
     /**
@@ -62,7 +65,6 @@ public class ElementalMelons
      Api
      Botania support
      TC support
-     Catalysts
      Texturing
      Recipes
 

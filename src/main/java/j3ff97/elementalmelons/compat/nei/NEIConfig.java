@@ -17,6 +17,9 @@ public class NEIConfig implements IConfigureNEI
         API.hideItem(new ItemStack(ModBlocks.waterMelonStem));
         API.hideItem(new ItemStack(ModBlocks.seedInfuser_on));
 
+        API.registerRecipeHandler(new SeedInfuserHandler());
+        API.registerUsageHandler(new SeedInfuserHandler());
+
     }
 
     @Override

@@ -19,6 +19,14 @@ public  final class Names
     public static final String earthMelonJuicename = "itemEarthMelonJuice";
     public static final String fireMelonJuicename = "itemFireMelonJuice";
     public static final String itemSqueezername = "itemSqueezer";
+    public static final String itemFlaskname = "itemFlask";
+
+    //Catalysts
+    public static final String commonCatalystName = "commonCatalyst";
+    public static final String skyCatalystName = "skyCatalyst";
+    public static final String fireCatalystName = "fireCatalyst";
+    public static final String earthCatalystName = "earthCatalyst";
+    public static final String waterCatalystName = "waterCatalyst";
 
     //Blocks
     public static final String blockSkyMelonname = "skyMelon";
@@ -30,6 +38,7 @@ public  final class Names
     public static final String waterMelonStemname = "waterMelonStem";
     public static final String fireMelonStemname = "fireMelonStem";
     public static final String blockSeedInfusername = "seedInfuser";
+    public static final String infusedStonename = "infusedStone";
 
     //Fluids
     public static final String fluidAppleJuiceName = "appleJuice";

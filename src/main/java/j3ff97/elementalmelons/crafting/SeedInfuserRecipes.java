@@ -1,16 +1,18 @@
 package j3ff97.elementalmelons.crafting;
 
+import j3ff97.elementalmelons.api.crafting.ISeedInfuserRecipe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SeedInfuserRecipes
 {
-    private static SeedInfuserRecipes infuserRecipes = null;
-
+    private static SeedInfuserRecipes       infuserRecipes     = new SeedInfuserRecipes();
     private static ItemStack[][][] infuserList = new ItemStack[64][64][64];
+    private final  List<ISeedInfuserRecipe> seedInfuserRecipes = new ArrayList<ISeedInfuserRecipe>();
 
     private SeedInfuserRecipes()
     {
@@ -19,11 +21,6 @@ public class SeedInfuserRecipes
 
     public static SeedInfuserRecipes getInstance()
     {
-        if(infuserRecipes == null)
-        {
-            infuserRecipes = new SeedInfuserRecipes();
-        }
-
         return infuserRecipes;
     }
 
@@ -61,6 +58,11 @@ public class SeedInfuserRecipes
                 break;
             }
         }
+    }
+
+    public List<ISeedInfuserRecipe> getAllRecipes()
+    {
+        return seedInfuserRecipes;
     }
 
     public void addInfusing(String input, Item i1, int meta, ItemStack output)

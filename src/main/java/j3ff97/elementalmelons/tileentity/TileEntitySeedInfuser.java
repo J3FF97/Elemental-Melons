@@ -13,12 +13,15 @@ import net.minecraftforge.common.util.ForgeDirection;
 public class TileEntitySeedInfuser extends TileEntity implements ISidedInventory
 {
     public static final int cookSpeed = 300;
-    private static final int[] slots_top    = new int[]{0, 1, 2};
-    private static final int[] slots_bottom = new int[]{0, 1, 2};
-    private static final int[] slots_side   = new int[]{0, 1, 2};
+    public static final int INPUT_1 = 0;
+    public static final int INPUT_2 = 1;
+    private static final int[] slots_top    = new int[]{0};
+    private static final int[] slots_bottom = new int[]{2};
+    private static final int[] slots_side   = new int[]{1};
     public int cookTime;
-    private ItemStack slots[];
-
+    public boolean isActive = cookTime > 0;
+    private ItemStack[] slots;
+    private ItemStack outputInventory;
     private String customName;
 
     public TileEntitySeedInfuser()
@@ -43,6 +46,7 @@ public class TileEntitySeedInfuser extends TileEntity implements ISidedInventory
             }
         }
 
+        outputInventory = ItemStack.loadItemStackFromNBT(compound.getCompoundTag("outputInventory"));
         cookTime = compound.getShort("CookTime");
     }
 
@@ -62,6 +66,13 @@ public class TileEntitySeedInfuser extends TileEntity implements ISidedInventory
                 slots[i].writeToNBT(compound);
                 list.appendTag(compound1);
             }
+        }
+
+        if(outputInventory != null)
+        {
+            NBTTagCompound outputCompound = new NBTTagCompound();
+            outputInventory.writeToNBT(outputCompound);
+            compound.setTag("outputInventory", outputCompound);
         }
 
         compound.setTag("Items", list);

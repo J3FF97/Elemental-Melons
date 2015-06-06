@@ -3,17 +3,34 @@ item.elementalmelons:skyMelonSlice.name=Sky Melon
 item.elementalmelons:earthMelonSlice.name=Earth Melon
 item.elementalmelons:waterMelonSlice.name=Water Melon
 item.elementalmelons:fireMelonSlice.name=Fire Melon
+
 item.elementalmelons:skyMelonSeeds.name=Sky Melon Seeds
 item.elementalmelons:earthMelonSeeds.name=Earth Melon Seeds
 item.elementalmelons:waterMelonSeeds.name=Water Melon Seeds
 item.elementalmelons:fireMelonSeeds.name=Fire Melon Seeds
+
 item.elementalmelons:itemMelonJuice.name=Melon Juice
 item.elementalmelons:itemSkyMelonJuice.name=Sky Melon Juice
 item.elementalmelons:itemWaterMelonJuice.name=Water Melon Juice
 item.elementalmelons:itemEarthMelonJuice.name=Earth Melon Juice
 item.elementalmelons:itemFireMelonJuice.name=Fire Melon Juice
+
 item.elementalmelons:itemSqueezer.name=Squeezer
-item.elementalmelons:itemCrystalPurifier.name=Crystal Purifier
+item.elementalmelons:itemFlask.name=Empty Flask
+
+item.elementalmelons:commonCatalyst.name=Common Catalyst
+item.elementalmelons:skyCatalyst.name=Sky Catalyst
+item.elementalmelons:fireCatalyst.name=Fire Catalyst
+item.elementalmelons:waterCatalyst.name=Water Catalyst
+item.elementalmelons:earthCatalyst.name=Earth Catalyst
+
+item.elementalmelons:melonJuiceBucket.name=Melon Juice Bucket
+item.elementalmelons:appleJuiceBucket.name=Apple Juice Bucket
+item.elementalmelons:pumpkinJuiceBucket.name=Pumpkin Juice Bucket
+item.elementalmelons:skyMelonJuiceBucket.name=Sky Melon Juice Bucket
+item.elementalmelons:fireMelonJuiceBucket.name=Fire Melon Juice Bucket
+item.elementalmelons:waterMelonJuiceBucket.name=Water Melon Juice Bucket
+item.elementalmelons:earthMelonJuiceBucket.name=Earth Melon Juice Bucket
 
 --Blocks--
 tile.elementalmelons:skyMelon.name=Sky Melon
@@ -21,9 +38,17 @@ tile.elementalmelons:earthMelon.name=Earth Melon
 tile.elementalmelons:waterMelon.name=Water Melon
 tile.elementalmelons:fireMelon.name=Fire Melon
 
---Tools--
+tile.elementalmelons:melonjuice.name=Melon Juice
+tile.elementalmelons:applejuice.name=Apple Juice
+tile.elementalmelons:pumpkinjuice.name=Pumpkin Juice
+tile.elementalmelons:skymelonjuice.name=Sky Melon Juice
+tile.elementalmelons:watermelonjuice.name=Water Melon Juice
+tile.elementalmelons:earthmelonjuice.name=Earth Melon Juice
+tile.elementalmelons:firemelonjuice.name=Fire Melon Juice
 
---Armor--
+tile.elementalmelons:seedInfuser.name=Seed Infuser
+
+container.seedInfuser=Seed Infuser
 
 --Misc--
-itemGroup.tabElementalMelons=Elemental Melons
+itemGroup.tabElementalMelons=Elemelons

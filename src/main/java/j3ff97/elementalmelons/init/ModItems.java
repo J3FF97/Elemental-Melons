@@ -2,6 +2,7 @@ package j3ff97.elementalmelons.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import j3ff97.elementalmelons.items.ItemCraftingEM;
+import j3ff97.elementalmelons.items.ItemEM;
 import j3ff97.elementalmelons.items.ItemFoodEM;
 import j3ff97.elementalmelons.items.ItemSeedEM;
 import j3ff97.elementalmelons.reference.Names;
@@ -21,9 +22,24 @@ public class ModItems
 
     public static ItemCraftingEM itemSqueezer;
 
+    public static ItemEM itemFlask;
+    public static ItemEM commonCatalyst;
+    public static ItemEM skyCatalyst;
+    public static ItemEM earthCatalyst;
+    public static ItemEM waterCatalyst;
+    public static ItemEM fireCatalyst;
+
     public static void init()
     {
-        itemSqueezer = new ItemCraftingEM(Names.itemSqueezername, 256);
+        itemSqueezer = new ItemCraftingEM(Names.itemSqueezername, 64);
+
+        itemFlask = new ItemEM(Names.itemFlaskname);
+
+        commonCatalyst = new ItemEM(Names.commonCatalystName);
+        skyCatalyst = new ItemEM(Names.skyCatalystName);
+        earthCatalyst = new ItemEM(Names.earthCatalystName);
+        waterCatalyst = new ItemEM(Names.waterCatalystName);
+        fireCatalyst = new ItemEM(Names.fireCatalystName);
 
         registerItems();
     }
@@ -31,6 +47,14 @@ public class ModItems
     public static void registerItems()
     {
         GameRegistry.registerItem(itemSqueezer, Names.itemSqueezername);
+        GameRegistry.registerItem(itemFlask, Names.itemFlaskname);
+        GameRegistry.registerItem(commonCatalyst, Names.commonCatalystName);
+        GameRegistry.registerItem(skyCatalyst, Names.skyCatalystName);
+        GameRegistry.registerItem(earthCatalyst, Names.earthCatalystName);
+        GameRegistry.registerItem(waterCatalyst, Names.waterCatalystName);
+        GameRegistry.registerItem(fireCatalyst, Names.fireCatalystName);
+
+
     }
 
     public static void initSlices()

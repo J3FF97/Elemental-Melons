@@ -14,16 +14,16 @@ import java.util.Random;
 
 public class BlockMelonEM extends Block
 {
-    @SideOnly(Side.CLIENT) public static IIcon topIcon;
-    @SideOnly(Side.CLIENT) public static IIcon sideIcon;
     public  Item   breakItem;
+    private IIcon[] icons = new IIcon[2];
+    //private String name;
 
 
     public BlockMelonEM(String name, Item breakItem)
     {
         super(Material.gourd);
         this.setBlockName(name);
-        this.setBlockTextureName(Reference.ID + ":" + name);
+        this.setBlockTextureName(Reference.ID.toLowerCase() + ":" + name);
         this.setCreativeTab(CreativeTab.tabElementalMelons);
         this.setHardness(1F);
         this.setResistance(5F);
@@ -48,21 +48,24 @@ public class BlockMelonEM extends Block
     @Override
     public void registerBlockIcons(IIconRegister icon)
     {
-        sideIcon = icon.registerIcon(this.textureName + "_side");
-        topIcon = icon.registerIcon(this.textureName + "_top");
+
+        for(int i = 0; i < icons.length; i++)
+        {
+            this.icons[i] = icon.registerIcon(this.textureName + "_" + i);
+        }
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int side, int metadata)
     {
-        if(side == 1)
+        if(side == 1 || side == 0)
         {
-            return topIcon;
+            return icons[1];
         }
         else
         {
-            return sideIcon;
+            return icons[0];
         }
     }
 

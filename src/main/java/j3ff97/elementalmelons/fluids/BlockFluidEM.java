@@ -2,7 +2,6 @@ package j3ff97.elementalmelons.fluids;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import j3ff97.elementalmelons.handler.CreativeTab;
 import j3ff97.elementalmelons.reference.Reference;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -20,7 +19,6 @@ public class BlockFluidEM extends BlockFluidClassic
     public BlockFluidEM(Fluid fluid, Material material)
     {
         super(fluid, material);
-        this.setCreativeTab(CreativeTab.tabElementalMelons);
         this.setBlockName(fluid.getName());
         this.setBlockTextureName(Reference.ID.toLowerCase() + ":" + fluid.getName());
     }

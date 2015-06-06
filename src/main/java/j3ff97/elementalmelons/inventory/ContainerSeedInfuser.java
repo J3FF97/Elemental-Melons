@@ -8,6 +8,8 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.tileentity.TileEntityFurnace;
 
 public class ContainerSeedInfuser extends ContainerEM
 {
@@ -69,29 +71,44 @@ public class ContainerSeedInfuser extends ContainerEM
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-
-            if(!this.mergeItemStack(itemstack1, 2, 39, true))
+            if(index == 2)
             {
-                return null;
+                if(!this.mergeItemStack(itemstack1, 3, 39, true))
+                {
+                    return null;
+                }
+
+                slot.onSlotChange(itemstack1, itemstack);
             }
-
-            slot.onSlotChange(itemstack1, itemstack);
-
-            if(index != 1 && index != 0)
+            else if(index != 1 && index != 0)
             {
-                if(index >= 2 && index < 30)
+                if(FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null)
+                {
+                    if(!this.mergeItemStack(itemstack1, 0, 1, false))
+                    {
+                        return null;
+                    }
+                }
+                else if(TileEntityFurnace.isItemFuel(itemstack1))
+                {
+                    if(!this.mergeItemStack(itemstack1, 1, 2, false))
+                    {
+                        return null;
+                    }
+                }
+                else if(index >= 3 && index < 30)
                 {
                     if(!this.mergeItemStack(itemstack1, 30, 39, false))
                     {
                         return null;
                     }
                 }
-                else if(index >= 30 && index < 39 && !this.mergeItemStack(itemstack1, 2, 30, false))
+                else if(index >= 30 && index < 39 && !this.mergeItemStack(itemstack1, 3, 30, false))
                 {
                     return null;
                 }
             }
-            else if(!this.mergeItemStack(itemstack1, 2, 39, false))
+            else if(!this.mergeItemStack(itemstack1, 3, 39, false))
             {
                 return null;
             }

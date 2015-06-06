@@ -2,7 +2,6 @@ package j3ff97.elementalmelons.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import j3ff97.elementalmelons.handler.CreativeTab;
 import j3ff97.elementalmelons.init.ModBlocks;
 import j3ff97.elementalmelons.init.ModItems;
 import j3ff97.elementalmelons.reference.Reference;
@@ -28,6 +27,7 @@ public class BlockStemEM extends BlockStem
         this.setCreativeTab((CreativeTabs) null);
         this.crop = crop;
     }
+
 
     public Item getSeedItem()
     {
@@ -57,6 +57,12 @@ public class BlockStemEM extends BlockStem
     public Item getItemDropped(int meta, Random rand, int fortune)
     {
         return this.getSeedItem();
+    }
+
+    @Override
+    public int quantityDropped(Random random)
+    {
+        return random.nextInt(1);
     }
 
     @Override
